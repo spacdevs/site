@@ -1,0 +1,19 @@
+.text-white {
+  color: white !important;
+}
+
+body,
+.s-about__process h3::before,
+.s-hero__video-link,
+.s-contact,
+.s-about .horizontal-line::before {
+  background: var(--color-primary) !important;
+}
+
+.section-title h3 {
+  color: var(--color-primary) !important;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}

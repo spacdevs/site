@@ -1,13 +1,37 @@
+:root {
+  --color-secondary: #a2ca4a;
+}
+
+
+.s-hero__bg {
+  background-image: url(/images/fish.jpg);
+}
+
+.s-hero__bg::after {
+  background: none !important;
+}
+
 .text-white {
   color: white !important;
 }
 
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.text-secondary {
+  color: var(--color-secondary) !important;
+}
+
 body,
 .s-about__process h3::before,
-.s-hero__video-link,
 .s-contact,
 .s-about .horizontal-line::before {
   background: var(--color-primary) !important;
+}
+
+.s-hero__video-link {
+  background: var(--color-secondary) !important;
 }
 
 .section-title h3 {

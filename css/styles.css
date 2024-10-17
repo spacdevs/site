@@ -4312,7 +4312,7 @@ html.no-csstransitions .s-hero__content {
 }
 
 .s-about__photo {
-    background-image   : url(../images/square/education.jpg);
+    background-image   : url(../images/education.jpg);
     background-repeat  : no-repeat;
     background-position: center;
     background-size    : cover;

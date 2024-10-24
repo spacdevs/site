@@ -9,6 +9,13 @@ body,
   background: var(--color-primary) !important;
 }
 
+.s-spaceinfo {
+  background-color: var(--color-bg);
+  padding-top     : calc(7* var(--space));
+  padding-bottom  : 0;
+  position        : relative;
+}
+
 .s-hero__bg {
   background-image: url(/images/bg.jpg);
 }
@@ -52,6 +59,11 @@ body,
 
 .s-contact__email {
   font-size: 5vw !important;
+}
+
+.separate-block {
+  margin-top   : var(--vspace-2_5);
+  margin-bottom: var(--vspace-2_5);
 }
 
 

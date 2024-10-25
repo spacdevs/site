@@ -16,6 +16,13 @@ body,
   position        : relative;
 }
 
+.s-auth {
+  padding-top     : calc(10 * var(--space));
+  padding-bottom  : calc(10 * var(--space));
+  background-color: var(--color-bg);
+  position        : relative;
+}
+
 .s-hero__bg {
   background-image: url(/images/bg.jpg);
 }
@@ -34,6 +41,11 @@ body,
 
 .text-secondary {
   color: var(--color-secondary) !important;
+}
+
+.btn--primary {
+  background  : var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
 }
 
 .s-hero__video-link {

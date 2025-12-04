@@ -1,346 +1,587 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <title>Spacedevs - Aprenda, aprimore, planeje e desenvolva softwares</title>
-    <meta name="author" content="">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como Funciona - Spacedevs</title>
 
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- HTML Meta Tags -->
-    <meta name="description" content="">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Outfit:wght@300;400;600;800&family=Dancing+Script:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://spacedevs.com.br/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Spacedevs - Aprenda, aprimore, planeje e desenvolva softwares">
-    <meta property="og:description" content="Espaço para você se tornar uma pessoa desenvolvedora de software">
-    <meta property="og:image">
-    <meta property="og:site_name" content="Spacedevs">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="www.spacedevs.com.br">
-    <meta property="twitter:url" content="https://www.spacedevs.com.br">
-    <meta name="twitter:title" content="Spacedevs - Aprenda, aprimore, planeje e desenvolva softwares">
-    <meta name="twitter:description" content="Espaço para você se tornar uma pessoa desenvolvedora de software">
-    <meta name="twitter:image" content>
-    <meta name="twitter:creator" content="@marcuxyz">
-
-    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/compressed/vendor.min.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script defer src="js/fontawesome/all.min.js"></script>
-
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#0B0B0F',
+                        brand: {
+                            purple: '#7C3AED',
+                            light: '#A78BFA',
+                            dark: '#5B21B6',
+                            soft: '#1C1C26',
+                            surface: '#13131A',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Fredoka', 'sans-serif'],
+                        hand: ['Dancing Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script defer src="app.js"></script>
 </head>
 
-<body id="top">
+<body class="bg-[#0B0B0F] text-gray-200 antialiased overflow-x-hidden selection:bg-brand-purple selection:text-white">
 
-
-    <!-- header
-    ================================================== -->
-    <header class="s-header">
-
-        <div class="s-header__logo">
-            <a href="/">
-                <img src="images/logo.png" alt="Homepage">
-            </a>
+    <!-- HEADER -->
+    <header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <img src="/logo.png" alt="" style="width: 50px; height: 50px;">
+                <!-- <div
+          class="w-10 h-10 bg-brand-purple rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(124,58,237,0.5)]">
+          <div class="w-4 h-4 border-2 border-white rounded-full"></div>
+        </div> -->
+                <!-- Navigation -->
+                <nav
+                    class="hidden md:flex items-center text-xs font-semibold tracking-widest text-gray-500 ml-8 gap-2 uppercase">
+                    <a href="index.html" class="hover:text-brand-light cursor-pointer transition-colors">Home</a>
+                    <span>/</span>
+                    <a href="index.html#quem-somos" class="hover:text-brand-light cursor-pointer transition-colors">Quem
+                        Somos</a>
+                    <span>/</span>
+                    <a href="index.html#trilha"
+                        class="hover:text-brand-light cursor-pointer transition-colors">Trilha</a>
+                    <span>/</span>
+                    <a href="como-funciona.html" class="text-brand-purple cursor-pointer hover:underline">Como
+                        Funciona</a>
+                    <span>/</span>
+                </nav>
+            </div>
         </div>
+    </header>
 
-        <div class="s-header__content">
+    <main class="flex-grow">
 
-            <nav class="s-header__nav-wrap">
-                <ul class="s-header__nav">
-                    <li><a href="/" title="Página inicial">Home</a></li>
-                    <li><a href="/como-funciona.html#how-work" title="Sobre nós">Como
-                            funciona</a></li>
-                    <li><a href="/#services" title="Services">Desenvolvimento</a></li>
-                </ul>
-            </nav> <!-- end s-header__nav-wrap -->
+        <!-- HERO SECTION -->
+        <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+            <div class="absolute top-0 right-0 w-full h-full pointer-events-none opacity-20">
+                <i data-lucide="lightbulb"
+                    class="absolute top-20 right-[10%] w-12 h-12 rotate-12 text-brand-purple"></i>
+                <i data-lucide="zap" class="absolute bottom-20 left-[5%] w-16 h-16 -rotate-6 text-brand-light"></i>
+            </div>
 
-            <a href="auth.html" class="btn btn--primary btn--small">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path
-                        d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z">
-                    </path>
-                </svg>
-                Entrar
-            </a>
-
-        </div> <!-- end header-content -->
-
-        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-
-    </header> <!-- end s-header -->
-
-
-    <!-- about
-    ================================================== -->
-    <section id="how-work" class="s-spaceinfo">
-
-        <div class="horizontal-line"></div>
-
-        <div class="row">
-            <div class="column large-12">
-                <div class="section-title" data-num="01" data-aos="fade-up">
-                    <h3 class="h6">Como funciona</h3>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-5xl md:text-7xl font-display font-bold text-white tracking-tight mb-6">
+                        Como Funciona a <span class="text-brand-purple">Spacedevs</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                        Entenda nosso processo de ensino, desde a inscrição até a conclusão do curso.
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <div class="column large-12 w-900-stack s-about__intro-text">
-                <h1 class="display-1" data-aos="fade-up">
-                    Escolas públicas
-                </h1>
+        <!-- PROCESSO SECTION -->
+        <section class="py-20 bg-[#0B0B0F]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
 
-                <p class="lead">
-                    O projeto da Spacedevs é focado em oferecer cursos de programação para alunos de escolas públicas,
-                    então se você é aluno de escola pública e deseja aprender a programar, a Spacedevs é o lugar certo
-                    para você. A ideia é oferecer cursos de programação de qualidade, com o objetivo de formar
-                    profissionais capacitados e prontos para o mercado de trabalho. A Spacedevs oferece um ambiente
-                    seguro para que todos possam aprender e se desenvolver, livres de qualquer tipo de preconceito.
-                </p>
-                <p class="lead">
-                    Para alunos de escolas públicas será necessário que a escola da qual o aluno faz parte, seja uma
-                    parceira da <strong class="text-white">Spacedevs</strong>.
-                    Pois, as aulas são feitas por ciclos, serão dadas aulas virtualmente e presencialmente, com o
-                    objetivo de garantir que todos consigam extrair o máximo do conteúdo ofertado, não sendo possível
-                    executar duas ou mais turmas ao mesmo tempo.
-                </p>
-            </div>
-        </div>
-
-        <div class="row block-large-1-2 block-tab-full s-about__process item-list">
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Divulgação</h3>
-                <p>
-                    Será divulgado aos alunos do ensino medio nas escolas públicas parceiras, que a Spacedevs estará
-                    ofertando curso de programação para que eles possam realizar a inscrição.
-                </p>
-            </div>
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Inscrição</h3>
-                <p>
-                    Alunos realizarão a inscrição através de um formulário online que será disponobilizado pela escola
-                    quando começar um novo ciclo. Serão disponibilizadas 20 vagas por ciclo, para que, não comprometa a
-                    qualidade do ensino.
-                </p>
-            </div>
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Material</h3>
-                <p>
-                    Todo o material será disponibilizados no formato de PDF, vídeos aulas e exercícios práticos para que
-                    os alunos comecem a ter familiaridade com o universo da programação, <strong
-                        class="text-white">antes de começar as aulas.</strong>
-                </p>
-            </div>
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Prova de conceito</h3>
-                <p>
-                    Alunos terão que realizar uma prova de conceito para que possam ser selecionados para o curso, esta
-                    prova irá decidir se os alunos realmente tem interesse em está realizando o curso.
-                </p>
-            </div>
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Abertura do ciclo</h3>
-                <p>
-                    Ao iniciar as aulas, será feito o primeiro contato presencial para que os alunos possam conhecer,
-                    tirar dúvidas e se ambientar.
-                </p>
-            </div>
-        </div>
-    </section> <!-- end s-about -->
-
-    <section id="services" class="s-services">
-
-        <div class="row block-tab-full s-services__services item-list">
-            <div class="column large-12">
-                <div class="section-title" data-num="02" data-aos="fade-up">
-                    <h3 class="h6">Escolas particulares e empresas</h3>
-                </div>
-            </div>
-            <div class="column large-12 w-900-stack">
-                <p class="lead">
-                    A Spacedevs surgiu por uma demanda social. <span class="text-white">"Queremos dar direito de
-                        aprender a quem não tem direito".</span> O nosso foco é, e sempre será, a inclusão
-                    social. Porém, sabemos que a demanda por cursos de programação é grande e que muitas escolas
-                    particulares, empresas e entidades não empresariais também querem
-                    oferecer cursos de programação para seus alunos, colaboradores e desenvolvimento pessoais. Por isso,
-                    a Spacedevs também
-                    oferece cursos de programação para escolas particulares, empresas e entidades não empresariais. Para
-                    obter mais
-                    informações, entre em contatoconosco clicando <a href="mailto:contato@spacedevs.com.br">aqui</a>.
-                </p>
-                <p>
-                    <strong class="text-white">*O curso ofertado de forma gratuita será somente para alunos de escolas
-                        públicas</strong>. Esta é uma das formas que a Spacedevs encontrou para se manter e continuar
-                    ofertando cursos de programação gratuitos para alunos de escolas públicas.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="column large-12 w-900-stack s-about__intro-text">
-                <p class="lead">
-                    Para que o curso seja executado com eficacia, é necessário que o aluno tenha um computador com
-                    acesso a
-                    internet ou a escola da qual o aluno faz parte disponibilize um labotário de informática
-                    para
-                    que os alunos possam realizar as aulas que serão dadas durante todo o curso. A Spacedevs também
-                    oferta
-                    um canal para tirar dúvidas na própria plataforma, além de um grupo em uma plataforma de mensageria
-                    para
-                    que os alunos possam interagir entre si e com os professores. Em parceria com as escolas, toda
-                    semana
-                    será disponibilizado um dia para que os alunos possam tirar suas dúvidas presencialmente, em relação
-                    as
-                    aulas e todo material disponibilizados para eles.
-                </p>
-            </div>
-        </div>
-
-    </section> <!-- end s-services -->
-
-    <section class="s-contact">
-
-        <div class="row narrower s-contact__top h-text-center">
-            <div class="column">
-                <h3 class="h6">Entre em contato</h3>
-                <h1 class="display-1">
-                    Entre em contato conosco para obter mais informações
-                </h1>
-            </div>
-        </div> <!-- s-footer__top -->
-
-        <div class="row h-text-center">
-            <div class="column">
-                <p class="s-contact__email">
-                    <a href="mailto:contato@spacedevs.com.br">contato@spacedevs.com.br</a>
-                </p>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- footer
-    ================================================== -->
-    <footer class="s-footer">
-        <div class="row row-y-top">
-
-            <div class="column large-8 medium-12">
-                <div class="row">
-                    <div class="column large-7 tab-12 s-footer__block">
-                        <h4 class="h6">Contato</h4>
-                        <ul class="s-footer__list">
-                            <li><a href="/como-funciona.html">Como funciona?</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="column large-5 tab-12 s-footer__block">
-                        <h4 class="h6">Redes</h4 class="h6">
-
-                        <ul class="s-footer__list">
-                            <li><a href="https://x.com/spacdevs" target="_blank">X.com</a></li>
-                            <li><a href="https://www.instagram.com/spacdevs/" target="_blank">Instagram</a></li>
-                            <li><a href="https://www.linkedin.com/company/spacdevs/" target="_blank">Linkedin</a></li>
-                            <li><a href="https://github.com/spacdevs" target="_blank">Github</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column large-4 medium-12 s-footer__block--end">
-                <a href="mailto:contato@spacedevs.com.br" class="btn h-full-width">Quero saber mais</a>
-
-                <div class="ss-copyright">
-                    <span>Todos os direitos reservados &copy; Spacedevs 2024</span>
-                    <span>Desenvolvido por <a href="https://www.styleshout.com/">StyleShout</a> e distribuido por <a
-                            href="https://themewagon.com">ThemeWagon</a></span>
-                </div>
-                <ul class="s-footer__list">
-                    <li>
-                        <p class="mt-5">
-                            Atendimento via whatsapp <br />
-                            <i class="fab fa-whatsapp" aria-hidden="false"></i> (71) 92002-1145
-                        </p>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top">
-                    topo
-                </a>
-            </div> <!-- end ss-go-top -->
-
-        </div>
-    </footer>
-
-    <!-- photoswipe background
-    ================================================== -->
-    <div aria-hidden="false" class="pswp" role="dialog" tabindex="-1">
-
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
-                        title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
-                        title="Share"></button> <button class="pswp__button pswp__button--fs"
-                        title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
-                        title="Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row gap-8 mb-16 group">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <div
+                                class="w-20 h-20 bg-brand-purple rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-[0_0_30px_rgba(124,58,237,0.4)] group-hover:scale-110 transition-transform">
+                                01
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-3xl font-display font-bold text-white mb-4 flex items-center gap-3">
+                                <i data-lucide="user-plus" class="w-8 h-8 text-brand-purple"></i>
+                                Inscrição
+                            </h3>
+                            <p class="text-gray-400 text-lg leading-relaxed mb-4">
+                                O processo começa indo na escola participante e apresentando o projeto para os alunos e
+                                os alunos
+                                interessados realizarão a inscrição através do nosso site. Preenchendo um formulário
+                                simples onde
+                                coletamos informações básicas e verificamos se o aluno atende aos critérios de
+                                elegibilidade apresentado
+                                na visita a escola.
+                            </p>
+                            <div class="bg-[#13131A] p-6 rounded-2xl border border-white/5">
+                                <h4 class="text-brand-light font-bold mb-3 flex items-center gap-2">
+                                    <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                    Requisitos
+                                </h4>
+                                <ul class="space-y-2 text-gray-400">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-purple mt-1">•</span>
+                                        <span>Estar matriculado em escola pública</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-purple mt-1">•</span>
+                                        <span>Ter acesso à internet</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-purple mt-1">•</span>
+                                        <span>Disponibilidade para as aulas</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-purple mt-1">•</span>
+                                        <span>Vontade de aprender e dedicação</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row gap-8 mb-16 group">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <div
+                                class="w-20 h-20 bg-brand-light rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-[0_0_30px_rgba(167,139,250,0.4)] group-hover:scale-110 transition-transform">
+                                02
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-3xl font-display font-bold text-white mb-4 flex items-center gap-3">
+                                <i data-lucide="clipboard-check" class="w-8 h-8 text-brand-light"></i>
+                                Processo Seletivo
+                            </h3>
+                            <p class="text-gray-400 text-lg leading-relaxed mb-4">
+                                Após a inscrição, realizamos uma entrevista para conhecer melhor cada candidato, suas
+                                motivações e
+                                expectativas. Não é necessário ter conhecimento prévio em programação - avaliamos
+                                principalmente seu
+                                interesse e comprometimento.
+                            </p>
+                            <div class="bg-[#13131A] p-6 rounded-2xl border border-white/5">
+                                <h4 class="text-brand-light font-bold mb-3 flex items-center gap-2">
+                                    <i data-lucide="message-square" class="w-5 h-5"></i>
+                                    O que avaliamos
+                                </h4>
+                                <ul class="space-y-2 text-gray-400">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-light mt-1">•</span>
+                                        <span>Motivação e interesse pela área de tecnologia</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-light mt-1">•</span>
+                                        <span>Disponibilidade de tempo para dedicação ao curso</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-light mt-1">•</span>
+                                        <span>Objetivos e expectativas com o programa</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-light mt-1">•</span>
+                                        <span>Perfil colaborativo e vontade de aprender</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row gap-8 mb-16 group">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <div
+                                class="w-20 h-20 bg-brand-dark rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-[0_0_30px_rgba(91,33,182,0.4)] group-hover:scale-110 transition-transform">
+                                03
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-3xl font-display font-bold text-white mb-4 flex items-center gap-3">
+                                <i data-lucide="rocket" class="w-8 h-8 text-brand-dark"></i>
+                                Início das Aulas
+                            </h3>
+                            <p class="text-gray-400 text-lg leading-relaxed mb-4">
+                                Uma vez aprovado, a pessoa participante receberá acesso à nossa plataforma de ensino e
+                                ao grupo da
+                                turma. As aulas
+                                acontecem de forma online, combinando teoria e prática.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-[#13131A] p-6 rounded-2xl border border-white/5">
+                                    <h4 class="text-brand-dark font-bold mb-3 flex items-center gap-2">
+                                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                                        Formato das Aulas
+                                    </h4>
+                                    <ul class="space-y-2 text-gray-400 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-dark mt-1">•</span>
+                                            <span>Aulas ao vivo via plataforma online</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-dark mt-1">•</span>
+                                            <span>Gravações disponíveis para revisão</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-dark mt-1">•</span>
+                                            <span>Exercícios práticos semanais</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-dark mt-1">•</span>
+                                            <span>Projetos em grupo</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-[#13131A] p-6 rounded-2xl border border-white/5">
+                                    <h4 class="text-brand-dark font-bold mb-3 flex items-center gap-2">
+                                        <i data-lucide="users" class="w-5 h-5"></i>
+                                        Suporte
+                                    </h4>
+                                    <ul class="space-y-2 text-gray-400 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-dark mt-1">•</span>
+                                            <span>Mentoria individual quando necessário</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-dark mt-1">•</span>
+                                            <span>Comunidade ativa no Discord</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-dark mt-1">•</span>
+                                            <span>Monitores disponíveis para dúvidas</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-dark mt-1">•</span>
+                                            <span>Material didático completo</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row gap-8 mb-16 group">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <div
+                                class="w-20 h-20 bg-brand-purple rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-[0_0_30px_rgba(124,58,237,0.4)] group-hover:scale-110 transition-transform">
+                                04
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-3xl font-display font-bold text-white mb-4 flex items-center gap-3">
+                                <i data-lucide="code-2" class="w-8 h-8 text-brand-purple"></i>
+                                Desenvolvimento e Projetos
+                            </h3>
+                            <p class="text-gray-400 text-lg leading-relaxed mb-4">
+                                Durante o curso, você desenvolverá diversos projetos práticos que irão compor seu
+                                portfólio. Cada módulo
+                                tem seus desafios e projetos, culminando em um projeto final completo.
+                            </p>
+                            <div class="bg-[#13131A] p-6 rounded-2xl border border-white/5">
+                                <h4 class="text-brand-purple font-bold mb-3 flex items-center gap-2">
+                                    <i data-lucide="folder" class="w-5 h-5"></i>
+                                    Projetos que você vai criar
+                                </h4>
+                                <ul class="space-y-2 text-gray-400">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-purple mt-1">•</span>
+                                        <span>Sistemas de gerenciamento</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-purple mt-1">•</span>
+                                        <span>Websites responsivos e interativos</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-purple mt-1">•</span>
+                                        <span>Aplicações web completas com banco de dados</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-brand-purple mt-1">•</span>
+                                        <span>Projeto final integrado com todas as tecnologias aprendidas</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="flex flex-col md:flex-row gap-8 group">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <div
+                                class="w-20 h-20 bg-gradient-to-br from-brand-purple to-brand-light rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-[0_0_30px_rgba(124,58,237,0.4)] group-hover:scale-110 transition-transform">
+                                05
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-3xl font-display font-bold text-white mb-4 flex items-center gap-3">
+                                <i data-lucide="award" class="w-8 h-8 text-brand-purple"></i>
+                                Conclusão e Certificação
+                            </h3>
+                            <p class="text-gray-400 text-lg leading-relaxed mb-4">
+                                Ao completar todos os módulos e projetos, você recebe um certificado de conclusão e
+                                continua tendo
+                                acesso à comunidade Spacedevs.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div
+                                    class="bg-gradient-to-br from-brand-purple/20 to-brand-light/20 p-6 rounded-2xl border border-brand-purple/30">
+                                    <h4 class="text-white font-bold mb-3 flex items-center gap-2">
+                                        <i data-lucide="trophy" class="w-5 h-5 text-brand-purple"></i>
+                                        Você vai receber
+                                    </h4>
+                                    <ul class="space-y-2 text-gray-300 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-purple mt-1">•</span>
+                                            <span>Certificado de conclusão</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-purple mt-1">•</span>
+                                            <span>Portfólio completo de projetos</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-purple mt-1">•</span>
+                                            <span>Acesso vitalício à comunidade</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-purple mt-1">•</span>
+                                            <span>Badge de aluno Spacedevs</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="bg-gradient-to-br from-brand-purple/20 to-brand-light/20 p-6 rounded-2xl border border-brand-purple/30">
+                                    <h4 class="text-white font-bold mb-3 flex items-center gap-2">
+                                        <i data-lucide="briefcase" class="w-5 h-5 text-brand-light"></i>
+                                        Após o curso
+                                    </h4>
+                                    <ul class="space-y-2 text-gray-300 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-light mt-1">•</span>
+                                            <span>Suporte para busca de estágio</span>
+                                        </li>
+                                        <!-- <li class="flex items-start gap-2">
+                      <span class="text-brand-light mt-1">•</span>
+                      <span>Rede de contatos com empresas</span>
+                    </li> -->
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-light mt-1">•</span>
+                                            <span>Eventos exclusivos para alunos</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-brand-light mt-1">•</span>
+                                            <span>Oportunidade de ser monitor</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="py-20 bg-[#13131A]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-4 text-center">
+                        Perguntas Frequentes
+                    </h2>
+                    <p class="text-gray-400 text-center mb-12">
+                        Tire suas dúvidas sobre o funcionamento do curso
+                    </p>
+
+                    <div class="space-y-4">
+                        <!-- FAQ 1 -->
+                        <div
+                            class="bg-[#0B0B0F] p-6 rounded-2xl border border-white/5 hover:border-brand-purple/30 transition-colors">
+                            <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                <i data-lucide="help-circle" class="w-5 h-5 text-brand-purple"></i>
+                                Preciso ter computador próprio?
+                            </h3>
+                            <p class="text-gray-400 pl-7">
+                                Estamos viabilizando a disponibilidade de um app mobile, mas atualmente, se faz
+                                necessário ter acesso a
+                                um computador com internet. Não precisa ser um computador potente -
+                                qualquer computador que rode um navegador web atualizado é suficiente para começar.
+                            </p>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div
+                            class="bg-[#0B0B0F] p-6 rounded-2xl border border-white/5 hover:border-brand-purple/30 transition-colors">
+                            <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                <i data-lucide="help-circle" class="w-5 h-5 text-brand-purple"></i>
+                                Quanto tempo dura o curso?
+                            </h3>
+                            <p class="text-gray-400 pl-7">
+                                O curso tem duração aproximada de 03 meses.
+                            </p>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div
+                            class="bg-[#0B0B0F] p-6 rounded-2xl border border-white/5 hover:border-brand-purple/30 transition-colors">
+                            <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                <i data-lucide="help-circle" class="w-5 h-5 text-brand-purple"></i>
+                                E se eu não puder participar de uma aula ao vivo?
+                            </h3>
+                            <p class="text-gray-400 pl-7">
+                                Todas as aulas são gravadas e ficam disponíveis para revisão. Você pode assistir quando
+                                tiver
+                                disponibilidade, mas recomendamos participar ao vivo sempre que possível para aproveitar
+                                melhor as
+                                interações.
+                            </p>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div
+                            class="bg-[#0B0B0F] p-6 rounded-2xl border border-white/5 hover:border-brand-purple/30 transition-colors">
+                            <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                <i data-lucide="help-circle" class="w-5 h-5 text-brand-purple"></i>
+                                O curso garante emprego?
+                            </h3>
+                            <p class="text-gray-400 pl-7">
+                                Não podemos garantir emprego, mas fornecemos todas as ferramentas necessárias para você
+                                se tornar um
+                                desenvolvedor competitivo no mercado, incluindo portfólio, certificado e networking com
+                                empresas
+                                parceiras.
+                            </p>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div
+                            class="bg-[#0B0B0F] p-6 rounded-2xl border border-white/5 hover:border-brand-purple/30 transition-colors">
+                            <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                <i data-lucide="help-circle" class="w-5 h-5 text-brand-purple"></i>
+                                Posso fazer o curso se ainda estou no ensino médio?
+                            </h3>
+                            <p class="text-gray-400 pl-7">
+                                Sim! Aceitamos alunos a partir do 9º ano do ensino fundamental, desde que tenham
+                                disponibilidade e
+                                compromisso com os estudos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="py-24 bg-gradient-to-br from-brand-purple to-brand-dark relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-10 left-10 w-32 h-32 border-4 border-white rounded-full"></div>
+                <div class="absolute bottom-20 right-20 w-40 h-40 border-4 border-white rounded-full"></div>
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-3xl mx-auto text-center text-white">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                        Pronto para começar sua jornada?
+                    </h2>
+                    <p class="text-xl mb-8 text-white/90">
+                        Junte-se à próxima turma e transforme seu futuro através da tecnologia
+                    </p>
+                    <!-- <a href="index.html#trilha"
+            class="inline-block bg-white text-brand-purple px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Ver Calendário de Turmas
+          </a> -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="relative bg-brand-purple pt-20 pb-10 text-white overflow-hidden">
+        <!-- Decorative -->
+        <div class="absolute top-0 left-0 w-full h-10 bg-[#0B0B0F] rounded-b-[50%] transform -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 opacity-10">
+            <svg width="300" height="300" viewBox="0 0 200 200">
+                <path fill="currentColor"
+                    d="M45.7,-76.3C58.9,-69.3,69.1,-55.6,76.5,-41.2C83.9,-26.8,88.5,-11.7,85.8,2.3C83.1,16.2,73.1,29,62.6,39.6C52.1,50.2,41.2,58.6,29.3,64.2C17.4,69.8,4.6,72.6,-7.3,71.2C-19.2,69.8,-30.2,64.2,-40.5,56.7C-50.8,49.2,-60.4,39.8,-68.2,28.6C-76,17.4,-82,4.4,-79.8,-7.4C-77.6,-19.2,-67.2,-29.8,-56.3,-38.3C-45.4,-46.8,-34,-53.2,-22.4,-61.2C-10.8,-69.2,1.1,-78.8,13.9,-81.2C26.7,-83.6,40.4,-78.8,45.7,-76.3Z"
+                    transform="translate(100 100)" />
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <p class="text-brand-light font-bold tracking-widest text-xs uppercase mb-4">Contato</p>
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">
+                    Entre em contato conosco para obter mais informações
+                </h2>
+                <a href="mailto:oi@spacedevs.com.br" class="inline-block group">
+                    <div
+                        class="text-3xl md:text-5xl lg:text-6xl font-bold text-white opacity-90 group-hover:opacity-100 transition-opacity break-all md:break-normal">
+                        oi@spacedevs.com.br
+                    </div>
+                    <div class="h-1 bg-white/30 w-full mt-2 group-hover:bg-white transition-colors"></div>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-10 text-sm">
+                <div>
+                    <h4 class="font-bold text-brand-light mb-4">Navegação</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="#" class="hover:text-white hover:underline">Home</a></li>
+                        <!-- <li><a href="#quem-somos" class="hover:text-white hover:underline">Quem Somos</a></li> -->
+                        <!-- <li><a href="#trilha" class="hover:text-white hover:underline">Metodologia</a></li> -->
+                        <li><a href="como-funciona.html" class="hover:text-white hover:underline">Como Funciona</a></li>
+                    </ul>
+                </div>
+                <!-- <div>
+          <h4 class="font-bold text-brand-light mb-4">Legal</h4>
+          <ul class="space-y-2 opacity-80">
+            <li><a href="#" class="hover:text-white hover:underline">Privacidade</a></li>
+            <li><a href="#" class="hover:text-white hover:underline">Termos</a></li>
+          </ul>
+        </div> -->
+                <div>
+                    <h4 class="font-bold text-brand-light mb-4">Social</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="https://www.instagram.com/spacdevs/"
+                                class="hover:text-white hover:underline">Instagram</a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/company/spacdevs/"
+                                class="hover:text-white hover:underline">LinkedIn</a></li>
+                        <li><a href="http://github.com/spacdevs/" class="hover:text-white hover:underline">GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                        <p class="text-xs mb-4">"Obrigado pela ajuda.
+                            Ótimo conteúdo, muito bem explicado e objetivo!"</p>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                            <span class="text-xs font-bold">Ex-aluno</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <div class="mt-12 text-center text-xs opacity-40">
+                <p>Spacedevs © 2024. Todos os direitos reservados.</p>
+                <p class="mt-1">Feito com 💜 na Bahia.</p>
+            </div>
         </div>
-
-    </div> <!-- end photoSwipe background -->
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
+    </footer>
 </body>
 
 </html>

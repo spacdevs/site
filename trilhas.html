@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spacedevs - Inclusão Social através da Tecnologia</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Outfit:wght@300;400;600;800&family=Dancing+Script:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <!-- HTML Meta Tags -->
+  <meta name="description" content="">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://spacedevs.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Spacedevs - Aprenda, aprimore, planeje e desenvolva softwares">
+  <meta property="og:description" content="Espaço para você se tornar uma pessoa desenvolvedora de software">
+  <meta property="og:image">
+  <meta property="og:site_name" content="Spacedevs">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="www.spacedevs.com.br">
+  <meta property="twitter:url" content="https://www.spacedevs.com.br">
+  <meta name="twitter:title" content="Spacedevs - Aprenda, aprimore, planeje e desenvolva softwares">
+  <meta name="twitter:description" content="Espaço para você se tornar uma pessoa desenvolvedora de software">
+  <meta name="twitter:image" content>
+  <meta name="twitter:creator" content="@marcuxyz">
+
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+  <!-- favicons
+    ================================================== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Config -->
+  <script defer src="/assets/js/config.js"></script>
+
+  <script type="importmap"></script>
+  <script defer src="/assets/js/app.js"></script>
+
+  </script>
+</head>
+
+<body class="antialiased overflow-x-hidden selection:bg-brand-purple selection:text-white">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="/assets/images/logo.png" alt="" style="width: 50px; height: 50px;">
+        <!-- Navigation -->
+        <nav
+          class="hidden md:flex items-center text-xs font-semibold tracking-widest text-gray-500 ml-8 gap-2 uppercase">
+          <a href="/" class="hover:text-brand-light cursor-pointer transition-colors">Home</a>
+          <span>/</span>
+          <a href="#quem-somos" class="hover:text-brand-light cursor-pointer transition-colors">Quem Somos</a>
+          <span>/</span>
+          <a href="#trilha" class="text-brand-purple cursor-pointer hover:underline">Trilha</a>
+          <span>/</span>
+          <a href="como-funciona.html" class="hover:text-brand-light cursor-pointer transition-colors">Como
+            Funciona</a>
+          <span>/</span>
+        </nav>
+      </div>
+
+      <!-- CTA Button and GitHub Link -->
+      <div class="flex items-center gap-4">
+        <a href="http://github.com/spacdevs/" target="_blank"
+          class="group inline-flex items-center gap-2 text-gray-400 hover:text-brand-light transition-colors px-3 py-2.5">
+          <i data-lucide="github" class="w-5 h-5"></i>
+          <span class="text-xs font-semibold uppercase tracking-widest">Open Source</span>
+        </a>
+        <button disabled
+          class="bg-brand-purple hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-bold text-sm tracking-wide transition-all shadow-[0px_4px_0px_0px_rgba(76,29,149,1)] hover:translate-y-[2px] hover:shadow-[0px_2px_0px_0px_rgba(76,29,149,1)] disabled:opacity-50 disabled:cursor-not-allowed ">
+          APOIAR
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="min-h-screen pt-32 pb-20 overflow-x-hidden">
+
+    <!-- Intro -->
+    <div class="container mx-auto px-6 text-center mb-20 relative z-10">
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-purple/10 blur-[120px] rounded-full pointer-events-none">
+      </div>
+      <h1 class="text-4xl md:text-6xl font-display font-bold text-white mb-6">
+        Sua Jornada na Space<span class="text-brand-purple">devs</span>
+      </h1>
+      <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+        Trilhas ofertadas pela Spacedevs. <br />Cada etapa foi desenhada para construir seu conhecimento de
+        forma sólida e concisa.
+      </p>
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="container mx-auto px-4 md:px-6 relative">
+
+      <!-- Vertical Line -->
+      <div
+        class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-purple via-brand-light to-brand-dark/20 md:-translate-x-1/2 rounded-full opacity-30">
+      </div>
+
+      <div class="space-y-12 md:space-y-24 relative">
+
+        <!-- Item 1 -->
+        <div class="flex flex-col md:flex-row items-start md:items-center w-full">
+          <div class="hidden md:block w-1/2"></div>
+
+          <!-- Node -->
+          <div
+            class="absolute left-8 md:left-1/2 -translate-x-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#0B0B0F] border-4 border-brand-purple flex items-center justify-center z-20 shadow-[0_0_20px_rgba(124,58,237,0.5)] transform transition-transform hover:scale-110">
+            <i data-lucide="rocket" class="w-6 h-6 text-white"></i>
+          </div>
+
+          <!-- Card -->
+          <div class="w-full md:w-1/2 pl-20 md:pl-16 md:text-left">
+            <div
+              class="group relative bg-[#13131A] border border-white/5 p-6 md:p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 hover:border-brand-purple/50 hover:shadow-[0_10px_40px_-10px_rgba(124,58,237,0.2)]">
+              <div class="md:hidden absolute top-8 -left-12 w-12 h-0.5 bg-brand-purple/30"></div>
+              <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-16 h-0.5 bg-brand-purple/30 -left-16">
+              </div>
+
+              <div
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border bg-brand-purple/10 text-brand-light border-brand-purple/20 animate-pulse md:ml-auto">
+                Em Andamento
+              </div>
+
+              <div
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border bg-green-500/10 text-green-400 border-green-500/20">
+                <i data-lucide="check-circle-2" class="w-3 h-3"></i> Certificado de conclusão
+              </div>
+
+
+              <div
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border bg-red-500/10 text-red-400 border-red-500/20">
+                <i data-lucide="check-circle-2" class="w-3 h-3"></i> Aberto ao público
+              </div>
+
+              <h3
+                class="text-2xl font-display font-bold text-white mb-1 group-hover:text-brand-purple transition-colors">
+                Onboarding</h3>
+              <p class="text-brand-light font-bold text-sm mb-4">O Início da Jornada</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">Tenha aulas práticas básicas de nivelamento de
+                informática, prepare seu ambiente de desenvolvimento e desenvolva a mentalidade de uma
+                pessoa programadora.</p>
+
+              <div class="flex flex-wrap gap-2 md:justify-start">
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Conhecendo
+                  a turma</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Cidadania
+                  Digital</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Introdução
+                  a tecnologia</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Arquitetura
+                  de computadores</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Algoritmos
+                  e Estruturas de Dados</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Avaliação</span>
+              </div>
+              <div class="mt-6 pt-6 border-t border-white/5 flex md:justify-start">
+                <a href="#"
+                  class="flex items-center gap-2 text-sm font-bold text-white hover:text-brand-light transition-colors group/btn">
+                  Quero assistir agora <i data-lucide="chevron-right"
+                    class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="flex flex-col md:flex-row items-start md:items-center w-full md:flex-row-reverse">
+          <div class="hidden md:block w-1/2"></div>
+
+          <!-- Node -->
+          <div
+            class="absolute left-8 md:left-1/2 -translate-x-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#0B0B0F] border-4 border-brand-purple flex items-center justify-center z-20 shadow-[0_0_20px_rgba(124,58,237,0.5)] transform transition-transform hover:scale-110">
+            <i data-lucide="layout" class="w-6 h-6 text-white"></i>
+          </div>
+
+          <!-- Card -->
+          <div class="w-full md:w-1/2 pl-20 md:pl-0 md:pr-16 md:text-right">
+            <div
+              class="group relative bg-[#13131A] border border-white/5 p-6 md:p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 hover:border-brand-purple/50 hover:shadow-[0_10px_40px_-10px_rgba(124,58,237,0.2)]">
+              <div class="md:hidden absolute top-8 -left-12 w-12 h-0.5 bg-brand-purple/30"></div>
+              <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-16 h-0.5 bg-brand-purple/30 -right-16">
+              </div>
+
+              <div
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border bg-brand-purple/10 text-brand-light border-brand-purple/20 animate-pulse md:ml-auto">
+                Em Andamento
+              </div>
+
+              <h3
+                class="text-2xl font-display font-bold text-white mb-1 group-hover:text-brand-purple transition-colors">
+                Desenvolva</h3>
+              <p class="text-brand-light font-bold text-sm mb-4">Construindo a Base</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">Aprenda conceitos básicos da programação, criar
+                aplicações simples e organizer seus projetos com o git.</p>
+
+              <div class="flex flex-wrap gap-2 md:justify-end">
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Como
+                  organizar projeto com o Git</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Introdução
+                  a Linguagem de programação</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Introdução
+                  à Lógica de Programação</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Projetos
+                  práticos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="flex flex-col md:flex-row items-start md:items-center w-full">
+          <div class="hidden md:block w-1/2"></div>
+
+          <div
+            class="absolute left-8 md:left-1/2 -translate-x-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#0B0B0F] border-4 border-brand-purple flex items-center justify-center z-20 shadow-[0_0_20px_rgba(124,58,237,0.5)] transform transition-transform hover:scale-110">
+            <i data-lucide="code-2" class="w-6 h-6 text-white"></i>
+          </div>
+
+          <div class="w-full md:w-1/2 pl-20 md:pl-16 md:text-left">
+            <div
+              class="group relative bg-[#13131A] border border-white/5 p-6 md:p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 hover:border-brand-purple/50 hover:shadow-[0_10px_40px_-10px_rgba(124,58,237,0.2)]">
+              <div class="md:hidden absolute top-8 -left-12 w-12 h-0.5 bg-brand-purple/30"></div>
+              <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-16 h-0.5 bg-brand-purple/30 -left-16">
+              </div>
+
+              <div
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border bg-brand-purple/10 text-brand-light border-brand-purple/20 animate-pulse">
+                Em Andamento
+              </div>
+
+              <h3
+                class="text-2xl font-display font-bold text-white mb-1 group-hover:text-brand-purple transition-colors">
+                Desenvolvendo Aplicação</h3>
+              <p class="text-brand-light font-bold text-sm mb-4">Dando vida a tudo que foi aprendeido</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">Neste módulo você irá colocar em prática tudo que
+                aprendeu construindo uma página web com interação do usuário.</p>
+
+              <div class="flex flex-wrap gap-2 md:justify-start">
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Introdução
+                  ao banco de dados relacional</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Programação
+                  Orientada a Objetos</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Como
+                  escrever uma boa documentação</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Desenvolvimento
+                  Web</span>
+                <span
+                  class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium text-gray-300 border border-white/5">Garantindo
+                  funcionamento com testes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-32 text-center relative z-10">
+        <div class="inline-block p-[2px] rounded-full bg-gradient-to-r from-brand-purple via-brand-light to-brand-dark">
+          <button onclick="window.location.href='index.html#quem-somos'"
+            class="bg-[#0B0B0F] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-transparent hover:scale-105 transition-all duration-300 shadow-2xl">
+            Começar Minha Jornada Agora
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <!-- FOOTER -->
+  <footer id="footer" class="relative bg-brand-purple pt-20 pb-10 text-white overflow-hidden">
+    <!-- Decorative -->
+    <div class="absolute top-0 left-0 w-full h-10 bg-[#0B0B0F] rounded-b-[50%] transform -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 opacity-10">
+      <svg width="300" height="300" viewBox="0 0 200 200">
+        <path fill="currentColor"
+          d="M45.7,-76.3C58.9,-69.3,69.1,-55.6,76.5,-41.2C83.9,-26.8,88.5,-11.7,85.8,2.3C83.1,16.2,73.1,29,62.6,39.6C52.1,50.2,41.2,58.6,29.3,64.2C17.4,69.8,4.6,72.6,-7.3,71.2C-19.2,69.8,-30.2,64.2,-40.5,56.7C-50.8,49.2,-60.4,39.8,-68.2,28.6C-76,17.4,-82,4.4,-79.8,-7.4C-77.6,-19.2,-67.2,-29.8,-56.3,-38.3C-45.4,-46.8,-34,-53.2,-22.4,-61.2C-10.8,-69.2,1.1,-78.8,13.9,-81.2C26.7,-83.6,40.4,-78.8,45.7,-76.3Z"
+          transform="translate(100 100)" />
+      </svg>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="text-center mb-16">
+        <p class="text-brand-light font-bold tracking-widest text-xs uppercase mb-4">Contato</p>
+        <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">
+          Entre em contato conosco para obter mais informações
+        </h2>
+        <a href="mailto:oi@spacedevs.com.br" class="inline-block group">
+          <div
+            class="text-3xl md:text-5xl lg:text-6xl font-bold text-white opacity-90 group-hover:opacity-100 transition-opacity break-all md:break-normal">
+            oi@spacedevs.com.br
+          </div>
+          <div class="h-1 bg-white/30 w-full mt-2 group-hover:bg-white transition-colors"></div>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-10 text-sm">
+        <div>
+          <h4 class="font-bold text-brand-light mb-4">Navegação</h4>
+          <ul class="space-y-2 opacity-80">
+            <li><a href="/" class="hover:text-white hover:underline">Home</a></li>
+            <li><a href="como-funciona.html" class="hover:text-white hover:underline">Como Funciona</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-brand-light mb-4">Social</h4>
+          <ul class="space-y-2 opacity-80">
+            <li><a href="https://www.instagram.com/spacdevs/" class="hover:text-white hover:underline">Instagram</a>
+            </li>
+            <li><a href="https://www.linkedin.com/company/spacdevs/"
+                class="hover:text-white hover:underline">LinkedIn</a></li>
+            <li><a href="http://github.com/spacdevs/" class="hover:text-white hover:underline">GitHub</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
+            <p class="text-xs mb-4">"Obrigado pela ajuda.
+              Ótimo conteúdo, muito bem explicado e objetivo!"</p>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span class="text-xs font-bold">Ex-aluno</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center text-xs opacity-40">
+        <p>Spacedevs © 2024. Todos os direitos reservados.</p>
+        <p class="mt-1">Feito com 💜 na Bahia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+
+</html>

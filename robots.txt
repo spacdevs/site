@@ -1,0 +1,22 @@
+# Robots.txt for Spacedevs
+# Generated: 2024-12-29
+
+# Allow all user-agents
+User-agent: *
+Allow: /
+
+# Disallow access to private/system directories
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Sitemap reference
+Sitemap: https://spacedevs.com.br/sitemap.xml
+
+# Crawl delay for all bots (in seconds)
+Crawl-delay: 1
+
+# Request rate limit for Google Bot
+User-agent: Googlebot
+Crawl-delay: 0

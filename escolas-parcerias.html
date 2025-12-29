@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolas Públicas Parcerias - Spacedevs</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Outfit:wght@300;400;600;800&family=Dancing+Script:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <!-- HTML Meta Tags -->
+  <meta name="description" content="Conheça as escolas públicas parceiras do programa Spacedevs.">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://spacedevs.com.br/escolas-parcerias.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Escolas Públicas Parcerias - Spacedevs">
+  <meta property="og:description" content="Conheça as escolas públicas parceiras do programa Spacedevs.">
+  <meta property="og:image" content="https://spacedevs.com.br/assets/images/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:site_name" content="Spacedevs">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="www.spacedevs.com.br">
+  <meta property="twitter:url" content="https://spacedevs.com.br/escolas-parcerias.html">
+  <meta name="twitter:title" content="Escolas Públicas Parcerias - Spacedevs">
+  <meta name="twitter:description" content="Conheça as escolas públicas parceiras do programa Spacedevs.">
+  <meta name="twitter:image" content="https://spacedevs.com.br/assets/images/og-image.svg">
+  <meta name="twitter:creator" content="@marcuxyz">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Config -->
+  <script defer src="/assets/js/config.js"></script>
+  <script defer src="/assets/js/app.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RR7M3KBKS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-0RR7M3KBKS');
+  </script>
+</head>
+
+<body class="bg-[#0B0B0F] text-gray-200 antialiased overflow-x-hidden selection:bg-brand-purple selection:text-white">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <a href="/"><img src="/assets/images/logo.png" alt="" style="width: 50px; height: 50px;"></a>
+        <!-- Navigation -->
+        <nav
+          class="hidden md:flex items-center text-xs font-semibold tracking-widest text-gray-500 ml-8 gap-2 uppercase">
+          <a href="index.html#quem-somos" class="hover:text-brand-light cursor-pointer transition-colors">Quem
+            Somos</a>
+          <span>/</span>
+          <a href="index.html#trilha" class="hover:text-brand-light cursor-pointer transition-colors">Trilha</a>
+          <span>/</span>
+          <a href="como-funciona.html" class="hover:text-brand-light cursor-pointer transition-colors">Como
+            Funciona</a>
+          <span>/</span>
+          <a href="escolas-parcerias.html" class="text-brand-purple cursor-pointer hover:underline">Escolas
+            Parcerias</a>
+          <span>/</span>
+          <a href="solicitacao-certificado.html"
+            class="hover:text-brand-light cursor-pointer transition-colors">Solicitar
+            Certificado</a>
+          <span>/</span>
+        </nav>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors text-gray-400 hover:text-white">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+      <div class="absolute top-0 right-0 w-full h-full pointer-events-none opacity-20">
+        <i data-lucide="school" class="absolute top-20 right-[10%] w-12 h-12 rotate-12 text-brand-purple"></i>
+        <i data-lucide="users" class="absolute bottom-20 left-[5%] w-16 h-16 -rotate-6 text-brand-light"></i>
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl md:text-7xl font-display font-bold text-white tracking-tight mb-6">
+            Escolas Públicas <span class="text-brand-purple">Parcerias</span>
+          </h1>
+          <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+            Conheça as instituições de ensino público que fazem parte da nossa rede de parcerias e promovem a
+            inclusão social através da tecnologia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCERIA DESTACADA -->
+    <section class="py-20 bg-[#0B0B0F]">
+      <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-12 text-center">
+            O que faz uma parceria <span class="text-brand-purple">Spacedevs</span>?
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Benefício 1 -->
+            <div
+              class="bg-[#13131A] p-8 rounded-2xl border border-white/5 hover:border-brand-purple/50 transition-colors">
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 bg-brand-purple rounded-lg flex items-center justify-center text-white flex-shrink-0 shadow-[0_0_20px_rgba(124,58,237,0.3)]">
+                  <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white">Educação de Qualidade</h3>
+              </div>
+              <p class="text-gray-400">
+                Oferecemos um currículo atualizado e relevante para o mercado de trabalho, com ênfase no
+                desenvolvimento de habilidades técnicas e comportamentais dos alunos.
+              </p>
+            </div>
+
+            <!-- Benefício 2 -->
+            <div
+              class="bg-[#13131A] p-8 rounded-2xl border border-white/5 hover:border-brand-purple/50 transition-colors">
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 bg-brand-purple rounded-lg flex items-center justify-center text-white flex-shrink-0 shadow-[0_0_20px_rgba(124,58,237,0.3)]">
+                  <i data-lucide="code" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white">Mentoria e Projetos Práticos</h3>
+              </div>
+              <p class="text-gray-400">
+                Este espaço é para você, estudante: participe de mentorias com profissionais do mercado,
+                desenvolva projetos reais para compor seu portfólio e ganhe experiência prática em trabalho
+                em equipe.
+              </p>
+            </div>
+
+            <!-- Benefício 3 -->
+            <div
+              class="bg-[#13131A] p-8 rounded-2xl border border-white/5 hover:border-brand-purple/50 transition-colors">
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 bg-brand-purple rounded-lg flex items-center justify-center text-white flex-shrink-0 shadow-[0_0_20px_rgba(124,58,237,0.3)]">
+                  <i data-lucide="briefcase" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white">Inserção no Mercado</h3>
+              </div>
+              <p class="text-gray-400">
+                Auxiliamos os alunos formandos a ingressar no mercado de trabalho através de parcerias com
+                empresas e oportunidades de estágio.
+              </p>
+            </div>
+
+            <!-- Benefício 4 -->
+            <div
+              class="bg-[#13131A] p-8 rounded-2xl border border-white/5 hover:border-brand-purple/50 transition-colors">
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 bg-brand-purple rounded-lg flex items-center justify-center text-white flex-shrink-0 shadow-[0_0_20px_rgba(124,58,237,0.3)]">
+                  <i data-lucide="shield-check" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white">Inclusão Social</h3>
+              </div>
+              <p class="text-gray-400">
+                Promovemos acesso igualitário à educação tecnológica, independente da situação
+                socioeconômica dos alunos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRITÉRIOS DE PARCERIA -->
+    <section class="py-20 bg-[#0B0B0F]">
+      <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-12 text-center">
+            Critérios para <span class="text-brand-purple">Parceria</span>
+          </h2>
+
+          <div class="bg-[#13131A] p-8 rounded-2xl border border-white/5">
+            <div class="space-y-6">
+              <!-- Critério 1 -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-10 h-10 bg-brand-purple rounded-full flex items-center justify-center text-white font-bold">
+                    1
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-white mb-2">Infraestrutura Tecnológica</h4>
+                  <p class="text-gray-400">
+                    A escola deve possuir laboratório de informática ou espaço adequado para aulas de
+                    desenvolvimento de software, com computadores e conexão de internet estável.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Critério 2 -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-10 h-10 bg-brand-purple rounded-full flex items-center justify-center text-white font-bold">
+                    2
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-white mb-2">Alunos Interessados</h4>
+                  <p class="text-gray-400">
+                    Máximo de 15 alunos interessados em participar do programa, com disponibilidade
+                    para acompanhar as aulas e atividades propostas.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Critério 3 -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-10 h-10 bg-brand-purple rounded-full flex items-center justify-center text-white font-bold">
+                    3
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-white mb-2">Apoio Institucional</h4>
+                  <p class="text-gray-400">
+                    Compromisso da direção e coordenação pedagógica em apoiar a implementação do
+                    programa, facilitando horários e recursos necessários.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Critério 4 -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-10 h-10 bg-brand-purple rounded-full flex items-center justify-center text-white font-bold">
+                    4
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-white mb-2">Localização</h4>
+                  <p class="text-gray-400">
+                    Escolas públicas situadas em regiões onde o Spacedevs atua, com prioridade para
+                    áreas de maior vulnerabilidade social.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSSAS ESCOLAS PARCEIRAS -->
+    <section class="py-20 bg-[#0B0B0F]">
+      <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-12 text-center">
+            Nossas Escolas <span class="text-brand-purple">Parceiras</span>
+          </h2>
+
+          <!-- Timeline -->
+          <div class="relative">
+            <!-- Linha Central -->
+            <div
+              class="absolute left-4 md:left-1/2 h-full w-0.5 bg-gradient-to-b from-brand-purple via-brand-light to-transparent -translate-x-1/2">
+            </div>
+
+            <!-- Escola 1 -->
+            <div class="relative flex flex-col md:flex-row items-center mb-16 group">
+              <!-- Data (Mobile: Topo, Desktop: Lado Oposto) -->
+              <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0 pl-12 md:pl-0 w-full">
+                <span
+                  class="inline-block py-1 px-3 rounded-full bg-brand-purple/20 text-brand-light text-sm font-bold border border-brand-purple/30">
+                  Desde Fevereiro 2025 </span>
+              </div>
+
+              <!-- Ponto Central -->
+              <div
+                class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 bg-[#0B0B0F] border-4 border-brand-purple rounded-full z-10 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_15px_rgba(124,58,237,0.5)]">
+              </div>
+
+              <!-- Card -->
+              <div class="md:w-1/2 md:pl-12 w-full pl-12">
+                <div
+                  class="bg-[#13131A] p-6 rounded-2xl border border-white/5 hover:border-brand-purple/50 hover:shadow-[0_0_30px_rgba(124,58,237,0.2)] transition-all duration-300 group-hover:-translate-y-1">
+                  <div class="relative h-48 mb-6 rounded-xl overflow-hidden">
+                    <img src="/assets/images/schools/cegrs.jpeg" alt="Escola de Exemplo 1"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#13131A] to-transparent opacity-60"></div>
+                    <div class="absolute bottom-4 left-4">
+                      <h3 class="text-2xl font-bold text-white mb-1">Colégio Estadual Governador Roberto Santos
+                      </h3>
+                      <p class="text-brand-light text-sm font-semibold flex items-center gap-1">
+                        <i data-lucide="map-pin" class="w-3 h-3"></i> Salvador - BA
+                      </p>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 mb-4 text-sm">
+                    Instituição pioneira na implementação do programa Spacedevs.
+                  </p>
+                  <div class="space-y-2 text-sm text-gray-400 border-t border-white/5 pt-4">
+                    <div class="flex items-center gap-2">
+                      <i data-lucide="phone" class="w-4 h-4 text-brand-purple flex-shrink-0"></i>
+                      <span>Telefone: (71) 3387-4695</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i data-lucide="map-pin-house" class="w-4 h-4 text-brand-purple flex-shrink-0"></i>
+                      <span>R. Silveira Martins, 355 - Cabula, Salvador - BA, 41192-010</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-20 bg-gradient-to-b from-[#0B0B0F] to-[#13131A] relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-purple/10 rounded-full blur-3xl">
+        </div>
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+            Sua escola quer fazer parte deste <span class="text-brand-purple">movimento?</span>
+          </h2>
+          <p class="text-xl text-gray-400 mb-8">
+            Entre em contato conosco e descubra como transformar a educação através da tecnologia.
+          </p>
+          <a href="mailto:parcerias@spacedevs.com.br"
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-purple to-brand-light text-white font-bold py-4 px-8 rounded-lg hover:shadow-[0_0_40px_rgba(124,58,237,0.5)] transition-all hover:scale-105 duration-300">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+            Solicitar Parceria
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-12 bg-[#0B0B0F]">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <!-- Logo Section -->
+        <div>
+          <img src="/assets/images/logo.png" alt="Spacedevs" style="width: 50px; height: 50px;" class="mb-4">
+          <p class="text-gray-400 text-sm">
+            Promovendo inclusão social através da educação tecnológica de qualidade.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-bold text-white mb-4">Navegação</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="index.html" class="hover:text-brand-light transition-colors">Home</a></li>
+            <li><a href="como-funciona.html" class="hover:text-brand-light transition-colors">Como Funciona</a></li>
+            <li><a href="escolas-parcerias.html" class="hover:text-brand-light transition-colors">Escolas Parcerias</a>
+            </li>
+            <li><a href="solicitacao-certificado.html" class="hover:text-brand-light transition-colors">Certificado</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div>
+          <h4 class="font-bold text-white mb-4">Contato</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="mailto:parcerias@spacedevs.com.br"
+                class="hover:text-brand-light transition-colors">Parcerias</a></li>
+            <li><a href="mailto:contato@spacedevs.com.br" class="hover:text-brand-light transition-colors">Contato</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h4 class="font-bold text-white mb-4">Redes Sociais</h4>
+          <div class="flex gap-4">
+            <a href="https://instagram.com/spacedevsbr" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-brand-purple transition-colors">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </a>
+            <a href="https://linkedin.com/company/spacedevsd" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-brand-purple transition-colors">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="https://x.com/spacedevsbr" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-brand-purple transition-colors">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/5 pt-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2024 Spacedevs. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
